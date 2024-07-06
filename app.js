@@ -12,7 +12,7 @@ password.oninput = function() {
     let strength = 0;
     let value = password.value;
 
-    // Check for lowercase letters
+    // lowercase letters
     if (value.match(/[a-z]/)) {
         strength += 1;
         feedback.lowercase.style.color = "green";
@@ -20,7 +20,7 @@ password.oninput = function() {
         feedback.lowercase.style.color = "red";
     }
 
-    // Check for uppercase letters
+    //uppercase letters
     if (value.match(/[A-Z]/)) {
         strength += 1;
         feedback.uppercase.style.color = "green";
@@ -28,7 +28,7 @@ password.oninput = function() {
         feedback.uppercase.style.color = "red";
     }
 
-    // Check for numbers
+    //numbers
     if (value.match(/[0-9]/)) {
         strength += 1;
         feedback.number.style.color = "green";
@@ -36,7 +36,7 @@ password.oninput = function() {
         feedback.number.style.color = "red";
     }
 
-    // Check for special characters
+    //special characters
     if (value.match(/.[!,@,#,$,%,^,&,*,?,_,~,-,(,)]/)) {
         strength += 1;
         feedback.special.style.color = "green";
@@ -44,7 +44,7 @@ password.oninput = function() {
         feedback.special.style.color = "red";
     }
 
-    // Check for length
+    // length
     if (value.length >= 8) {
         strength += 1;
         feedback.length.style.color = "green";
@@ -52,7 +52,7 @@ password.oninput = function() {
         feedback.length.style.color = "red";
     }
 
-    // Determine strength and set appropriate styles
+    
     let widthPower = ["20%", "40%", "60%", "80%", "100%"];
     let colorPower = ["red", "yellow", "yellow", "yellow", "green"];
     let text = ["Password is very weak", "Password is weak", "Password is moderate", "Password is good", "Password is strong"];
